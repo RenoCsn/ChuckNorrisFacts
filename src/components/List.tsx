@@ -9,15 +9,22 @@ const List = ({ data = [], text = '', status = '' }) => {
   }
 
   if (isEmpty) {
-    return <h2>No Results found for: {text} </h2>;
+    return <h2 className="my-5">No Results found for: {text} </h2>;
   }
 
   return (
     <>
-      <h2>Results for "{isRandom ? 'Random' : text}": </h2>
-      <ul>
+      <h2 className="my-5">Results for "{isRandom ? 'Random' : text}": </h2>
+      <ul className="">
         {data.map(({ id, value }) => {
-          return <li key={id}>{value}</li>;
+          return (
+            <li
+              className="my-2 py-2 px-5 border-gray-300 border-b rounded-md text-lg text-center max-w-[60%] shadow"
+              key={id}
+            >
+              {value}
+            </li>
+          );
         })}
       </ul>
     </>
