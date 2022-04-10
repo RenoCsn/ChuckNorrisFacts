@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Search = ({ onChange, onSubmit, onRandomClick }) => {
+const Search = ({ onChange, onSubmit, onRandomClick, isSubmitDisabled }) => {
   return (
     <div>
       <input
@@ -12,7 +12,9 @@ const Search = ({ onChange, onSubmit, onRandomClick }) => {
           onChange(event.target.value);
         }}
       />
-      <button onClick={onSubmit}>Search</button>
+      <button onClick={onSubmit} disabled={isSubmitDisabled}>
+        Search
+      </button>
       <button onClick={onRandomClick}>Random</button>
     </div>
   );
