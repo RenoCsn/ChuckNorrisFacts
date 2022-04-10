@@ -14,7 +14,7 @@ const List = ({ data = [], text = '', status = '' }) => {
 
   return (
     <>
-      <h2 className="bg-black">Results for "{isRandom ? 'Random' : text}": </h2>
+      <h2>Results for "{isRandom ? 'Random' : text}": </h2>
       <ul>
         {data.map(({ id, value }) => {
           return <li key={id}>{value}</li>;

@@ -10,7 +10,6 @@ export function App() {
   const [text, setText] = useState('');
   return (
     <div>
-      <div className="bg-black">Batata</div>
       <Search
         onChange={setText}
         onSubmit={() => getData(text)}
