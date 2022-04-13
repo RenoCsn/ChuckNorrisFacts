@@ -9,17 +9,23 @@ const List = ({ data = [], text = '', status = '' }) => {
   }
 
   if (isEmpty) {
-    return <h2 className="my-5">No Results found for: {text} </h2>;
+    return (
+      <h2 className="my-5 text-xl font-semibold ">
+        No Results found for: {text}{' '}
+      </h2>
+    );
   }
 
   return (
     <>
-      <h2 className="my-5">Results for "{isRandom ? 'Random' : text}": </h2>
-      <ul className="">
+      <h2 className="my-5 text-xl font-semibold">
+        Results for "{isRandom ? 'Random' : text}":{' '}
+      </h2>
+      <ul className="max-w-[80%] justify-items-center">
         {data.map(({ id, value }) => {
           return (
             <li
-              className="my-2 py-2 px-5 border-gray-300 border-b rounded-md text-lg text-center max-w-[60%] shadow"
+              className="my-2 py-2 px-5 border-gray-300 border-b rounded-md text-lg text-center  shadow "
               key={id}
             >
               {value}
